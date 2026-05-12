@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción BuenSabor</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <form id="encuesta-form">
+        <h2>Encuesta de Satisfacción - BuenSabor</h2>
+        
+        <div class="form-group">
+            <label for="nombre">Nombre del cliente:</label>
+            <input type="text" id="nombre" placeholder="Ingresa el nombre">
+        </div>
+
+        <div class="form-group">
+            <label for="sucursal">Sucursal visitada:</label>
+            <input type="text" id="sucursal" placeholder="Ej. Centro">
+        </div>
+
+        <h3>Evaluación de Aspectos</h3>
+        
+        <div class="aspect-header">
+            <span class="header-aspecto">ASPECTO EVALUADO</span>
+            <span class="header-calif">CALIF. (1-5)</span>
+            <span class="header-peso">PESO (%)</span>
+        </div>
+
+        <div class="aspect-row">
+            <input type="text" id="aspecto1" class="input-aspecto" value="Calidad de la comida">
+            <input type="number" id="calif1" class="input-calif" placeholder="1-5" min="1" max="5">
+            <input type="number" id="peso1" class="input-peso peso-input" placeholder="%" min="0" max="100">
+        </div>
+
+        <div class="aspect-row">
+            <input type="text" id="aspecto2" class="input-aspecto" value="Atención del personal">
+            <input type="number" id="calif2" class="input-calif" placeholder="1-5" min="1" max="5">
+            <input type="number" id="peso2" class="input-peso peso-input" placeholder="%" min="0" max="100">
+        </div>
+
+        <div class="aspect-row">
+            <input type="text" id="aspecto3" class="input-aspecto" value="Tiempo de espera">
+            <input type="number" id="calif3" class="input-calif" placeholder="1-5" min="1" max="5">
+            <input type="number" id="peso3" class="input-peso peso-input" placeholder="%" min="0" max="100">
+        </div>
+
+        <div class="aspect-row">
+            <input type="text" id="aspecto4" class="input-aspecto" value="Limpieza del local">
+            <input type="number" id="calif4" class="input-calif" placeholder="1-5" min="1" max="5">
+            <input type="number" id="peso4" class="input-peso peso-input" placeholder="%" min="0" max="100">
+        </div>
+
+        <div class="aspect-row">
+            <input type="text" id="aspecto5" class="input-aspecto" value="Relación precio/calidad">
+            <input type="number" id="calif5" class="input-calif" placeholder="1-5" min="1" max="5">
+            <input type="number" id="peso5" class="input-peso peso-input" placeholder="%" min="0" max="100">
+        </div>
+
+        <div class="suma-container">
+            <span>Suma actual de pesos:</span>
+            <span id="suma-actual" class="suma-valor">0%</span>
+        </div>
+
+        <div id="mensajes-error" class="hidden"></div>
+        <div id="resultado-final" class="hidden"></div>
+
+        <button type="button" id="btn-calcular">Calcular satisfacción</button>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
