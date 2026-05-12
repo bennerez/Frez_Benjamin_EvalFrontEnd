@@ -97,7 +97,7 @@ function mostrarErrores(listaErrores) {
     htmlErrores += `</ul>`;
     
     errorBox.innerHTML = htmlErrores;
-    errorBox.className = 'error-box'; // Remueve el hidden y aplica estilos
+    errorBox.className = 'error-box'; 
 }
 
 // Función para imprimir el resultado final
